@@ -1,3 +1,4 @@
+using System;
 namespace Aula20SENAIfood
 {
     public class Cliente
@@ -12,9 +13,9 @@ namespace Aula20SENAIfood
 
         }
 
-        public void MostrarDados(){
+        public string MostrarDados(){
 
-            System.Console.WriteLine($"O Sr {Nome} está localizada em {EnderecoAtual}\n");
+            return $"O Sr {Nome} está localizada em {EnderecoAtual}\n";
 
         }
     

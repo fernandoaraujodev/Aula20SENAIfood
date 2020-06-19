@@ -1,3 +1,4 @@
+using System;
 namespace Aula20SENAIfood
 {
     public class Restaurante
@@ -6,9 +7,9 @@ namespace Aula20SENAIfood
         
         public string Endereco { get;set; }
 
-        public void MostrarDados(){
+        public string MostrarDados(){
            
-            System.Console.WriteLine($"A {NomeFantasia} está localizada na {Endereco}\n");
+            return $"A {NomeFantasia} está localizada na {Endereco}\n";
 
         }
 

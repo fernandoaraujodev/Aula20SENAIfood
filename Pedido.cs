@@ -4,20 +4,26 @@ namespace Aula20SENAIfood
     public class Pedido
     {
         public string Itens {get; set;}
-        public string Cliente {get; set;}
+        public Cliente cliente {get; set;}
         public string FormaDePGTO {get; set;}
         public bool PedidoPago {get; set;}         
-        public string Restaurante {get; set;}
+        public Restaurante restaurante {get; set;}
+        public DateTime HoraEntrega {get;set;}
 
-        public Pedido(string _itens, string _cliente){  
+        public Pedido(string _itens){  
 
             this.Itens = _itens;
-            this.Cliente = _cliente;
 
         }
 
         public string EntregarPedido(){
-            return "O pedido saiu para entrega....";
+
+            HoraEntrega = DateTime.Now;
+
+            string Mensagem = $"\n{Itens} entregue as {HoraEntrega}\nPor: {restaurante.NomeFantasia} \nPara: {cliente.Nome} em {cliente.EnderecoAtual}";
+
+            return Mensagem; 
+
         }
 
 
